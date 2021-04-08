@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row icon-row">
+    <div class="mx-auto" style="text-align: center">
+      <mat-icon class="mat-icon" inline=true>square_foot</mat-icon>
+    </div>
+  </div>
+  <div class="row title-row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto" style="text-align: center">
+      <h5>Welcome to Tutoras!</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin">
+        <div class="card-body">
+          <h5 class="card-title text-center">Sign In</h5>
+          <form class="form-signin">
+            <div class="form-label-group">
+              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus [(ngModel)]="email" name="email">
+            </div>
+
+            <div class="form-label-group">
+              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required [(ngModel)]="password" name="password">
+            </div>
+            <hr class="my-4">
+            <button (click)='login()' class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in
+            </button>
+            <button [routerLink]="['/signup']" class="btn btn-lg btn-warning btn-block text-uppercase" type="submit">
+              Register
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
